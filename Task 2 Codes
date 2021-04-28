@@ -1,0 +1,18 @@
+import numpy as np
+import matplotlib.pyplot as plt
+%matplotlib inline
+
+A = np.array([8,3,5])
+M = np.array([10,0,12])
+
+
+fig = plt.figure()
+ax = fig.gca(projection='3d')
+ax.set_xlim([-2, 20])
+ax.set_ylim([-2, 20])
+ax.set_zlim([-2, 20])
+
+ax.quiver(0, 0, 0, A[0], A[1], A[2], arrow_length_ratio=0.05, colors='blue')
+ax.quiver(0, 0, 0, M[0], M[1], M[2], arrow_length_ratio=0.05, colors='yellow')
+
+plt.show()
